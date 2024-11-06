@@ -1,0 +1,76 @@
+/* General Layout for Centering the Form */
+.add-book-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #b76565, #f0f4f8);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Heading */
+.add-book-container h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #741111;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Form Labels */
+label {
+    align-self: flex-start;
+    font-weight: bold;
+    color: #333;
+    margin-top: 15px;
+}
+
+/* Form Inputs */
+input[type="text"],
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 16px 0;
+    border: 1px solid #6d3939;
+    border-radius: 6px;
+    font-size: 15px;
+    background-color: #fff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus {
+    border-color: #4caf50;
+    box-shadow: 0 0 6px rgba(76, 175, 80, 0.4);
+    outline: none;
+}
+
+/* Button Styling */
+button {
+    background: linear-gradient(45deg, #4caf50, #66bb6a);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #45a049, #558b2f);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+    background: linear-gradient(45deg, #388e3c, #4caf50);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}

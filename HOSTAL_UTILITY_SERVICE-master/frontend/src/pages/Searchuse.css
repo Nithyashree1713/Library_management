@@ -1,0 +1,132 @@
+/* Container styling for the entire view */
+.container {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+}
+
+/* Styling for each book card */
+.complaint-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+/* Hover effect for the book card */
+.complaint-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Styling for the text content inside the card */
+.complaint-card p {
+    margin: 8px 0;
+    color: #333;
+}
+
+/* Styling for strong tags (like for Book Name, Author) */
+.complaint-card p strong {
+    color: #555;
+    font-weight: bold;
+}
+
+/* Styling for the 'No Book Found' message */
+.no-complaints {
+    text-align: center;
+    color: #777;
+    font-size: 1.1em;
+    margin-top: 20px;
+}
+
+/* Delete button styling */
+.complaint-card button {
+    background-color: #ff4d4d; /* Red background */
+    color: white; /* White text */
+    border: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease;
+}
+
+/* Hover effect for delete button */
+.complaint-card button:hover {
+    background-color: #e60000; /* Darker red on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+/* Focus style for delete button */
+.complaint-card button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 77, 77, 0.7); /* Red glow on focus */
+}
+
+/* Delete button disabled state (optional) */
+.complaint-card button:disabled {
+    background-color: #e0e0e0; /* Light gray */
+    color: #b0b0b0; /* Gray text */
+    cursor: not-allowed; /* Disable cursor */
+}
+.container {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+}
+
+.complaint-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.complaint-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.complaint-card p {
+    margin: 8px 0;
+    color: #333;
+}
+
+.complaint-card p strong {
+    color: #555;
+    font-weight: bold;
+}
+
+.order-status {
+    color: green;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:active {
+    background-color: #3e8e41;
+}
