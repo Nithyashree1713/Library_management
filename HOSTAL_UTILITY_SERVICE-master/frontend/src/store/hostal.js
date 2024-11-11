@@ -4,6 +4,7 @@ export const usehostalstore = create((set) => ({
     accounts: [],
     book: [],
     form:[],
+    favoriteBooks: [],  // State to store favorite books
     currentUser: null, // To store the currently signed-in user
 
     setAccount: (accounts) => set({ accounts }),
@@ -185,5 +186,47 @@ export const usehostalstore = create((set) => ({
             set({ form: data.data }); // Store complaints in comp state
         }
     },
+    // addFavorite: (book) => set((state) => {
+    //     const isAlreadyFavorite = state.favoriteBooks.some(favBook => favBook._id === book._id);
+    //     if (!isAlreadyFavorite) {
+    //         return { favoriteBooks: [...state.favoriteBooks, book] };
+    //     }
+    //     return state;
+    // }),
     
+/*addFavorite: async (favoriteBooks) => {
+        if (!favoriteBooks.name || !favoriteBooks.email || !favoriteBooks.pno||!favoriteBooks.date||!favoriteBooks.book) {
+            return { success: false, message: "Please fill in all fields." };
+        }
+        const res = await fetch("/api/fav", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(Form),
+        });
+        const data = await res.json();
+        if (data.success) {
+            set((state) => ({ favoriteBooks: [...state.favoriteBooks, data.data] }));
+        }
+        return { success: data.success, message: data.message };
+    },*/
+  
+    
+       
+    
+      
+
+    // fetchBook: async () => {
+    //     const res = await fetch("/api/getbook", {
+    //         method: "GET",
+    //         headers: {
+    //             "Content-Type": "application/json",
+    //         },
+    //     });
+    //     const data = await res.json();
+    //     if (data.success) {
+    //         set({ book: data.data });
+    //     }
+    // },
 }));

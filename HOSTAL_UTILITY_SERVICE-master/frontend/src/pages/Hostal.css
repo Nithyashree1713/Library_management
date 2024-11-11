@@ -19,11 +19,12 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin-left: 40%;
 }
 
 .head {
     font-size: 30px;
-    background: linear-gradient(to right, rgb(255, 153, 0), rgb(230, 223, 223));
+    background: linear-gradient(to right, rgb(255, 153, 0), rgb(225, 0, 0));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

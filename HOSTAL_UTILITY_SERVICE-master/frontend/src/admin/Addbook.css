@@ -5,8 +5,9 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    max-width: 400px;
+    max-width: 700px;
     margin: 0 auto;
+    margin-top: 20px;
     padding: 30px;
     background: linear-gradient(135deg, #b76565, #f0f4f8);
     border-radius: 12px;

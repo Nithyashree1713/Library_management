@@ -14,8 +14,8 @@ function Signin() {
     const signIn = async () => {
         const response = await signInAccount(account);
         console.log('Response from sign-in:', response);
-        const { success, message, isAdmin } = response;
-        setMessage(message);
+        const { success, message, data } = response;
+        setMessage(data);
         console.log(message);
         
         

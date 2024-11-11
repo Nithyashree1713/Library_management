@@ -12,11 +12,29 @@ export default function Addbook() {
         image: ""
     });
 
+    const [successMessage, setSuccessMessage] = useState(""); // State for success message
+
     const { createBook } = usehostalstore();
 
     const submit = async () => {
-        const { success, message } = await createBook(newBook);
-        setNewBook({ name: "", author: "", category: "", publishedDate: "", image: "" });
+        try {
+            const { success, message } = await createBook(newBook);
+            
+            if (success) {
+                setSuccessMessage("Book added successfully!"); 
+                setTimeout(() => setSuccessMessage(""), 2000);
+                // Show success message
+            } else {
+                setSuccessMessage(message || "Failed to add book. Please try again."); // Handle failure
+            }
+
+            // Reset form fields
+            setNewBook({ name: "", author: "", category: "", publishedDate: "", image: "" });
+
+        } catch (error) {
+            console.error("Error adding book:", error);
+            setSuccessMessage("An error occurred. Please try again.");
+        }
     };
 
     return (
@@ -24,6 +42,7 @@ export default function Addbook() {
             <Navbar />
             <div className="add-book-container">
                 <h2>Add New Book</h2>
+
                 <label htmlFor="name">Book Name:</label>
                 <input
                     type="text"
@@ -32,6 +51,7 @@ export default function Addbook() {
                     value={newBook.name}
                     onChange={(e) => setNewBook({ ...newBook, name: e.target.value })}
                 />
+
                 <label htmlFor="author">Author:</label>
                 <input
                     type="text"
@@ -40,6 +60,7 @@ export default function Addbook() {
                     value={newBook.author}
                     onChange={(e) => setNewBook({ ...newBook, author: e.target.value })}
                 />
+
                 <label htmlFor="category">Category:</label>
                 <input
                     type="text"
@@ -48,6 +69,7 @@ export default function Addbook() {
                     value={newBook.category}
                     onChange={(e) => setNewBook({ ...newBook, category: e.target.value })}
                 />
+
                 <label htmlFor="publishedDate">Published Date:</label>
                 <input
                     type="date"
@@ -56,6 +78,7 @@ export default function Addbook() {
                     value={newBook.publishedDate}
                     onChange={(e) => setNewBook({ ...newBook, publishedDate: e.target.value })}
                 />
+
                 <label htmlFor="image">Image URL:</label>
                 <input
                     type="text"
@@ -64,7 +87,11 @@ export default function Addbook() {
                     value={newBook.image}
                     onChange={(e) => setNewBook({ ...newBook, image: e.target.value })}
                 />
+
                 <button type="button" onClick={submit}>Submit</button>
+
+                {/* Display success message */}
+                {successMessage && <p className="success-message">{successMessage}</p>}
             </div>
         </>
     );

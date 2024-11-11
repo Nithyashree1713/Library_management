@@ -21,7 +21,7 @@ function Signinadmin() {
         
         if (success) {
          
-                window.location.href = "/admin"; // Redirect to home page for regular users
+                window.location.href = "/admin";
             
         } else {
             setAccount({ email: "", password: "" });

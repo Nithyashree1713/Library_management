@@ -10,7 +10,7 @@ import Signupadmin from './admin/Signupadmin';
 import Addbook from './admin/Addbook';
 import Searchuse from './pages/Searchuse';
 import Orderdet from './admin/Orderdet';
-import Favourite from './pages/Favourite';
+import FavoriteBooks from './pages/FavoriteBooks';
 import Userinfo from './pages/Userinfo';
 import Search from './admin/Search';
 import Form from './pages/Form';
@@ -31,7 +31,7 @@ function App() {
         <Route path="/search" element={<Search/>}/> 
         <Route path="/orderdet" element={<Orderdet/>}/> 
         <Route path="/sea" element={<Searchuse/>}/> 
-        <Route path="/fav" element={<Favourite/>}/> 
+        <Route path="/fav" element={<FavoriteBooks/>}/> 
         <Route path="/info" element={<Userinfo/>}/> 
         <Route path="/form" element={<Form/>}/> 
 
