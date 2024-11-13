@@ -56,7 +56,7 @@ function Signin() {
                     onChange={(e) => setAccount({ ...account, password: e.target.value })}
                 />
             </div>
-            <button type="button" onClick={signIn}>SIGN IN</button>
+            <button type="button" onClick={signIn}>SIGN IN</button><br />
             {message && <p className="message">{message}</p>}
             <p>Don't have an account? <a href="/signup">Sign up</a></p>
         </div>
